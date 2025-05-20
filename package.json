@@ -1,0 +1,34 @@
+{
+  "name": "taskendo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npx prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:generate": "npx prisma generate",
+    "prisma:push": "npx prisma db push",
+    "prisma:migrate": "npx prisma migrate dev --name init",
+    "reset": "rm -rf .next/ && rm -rf node_modules/.prisma && npx prisma generate && npm run dev"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.9.1",
+    "@prisma/client": "^6.7.0",
+    "dotenv": "^16.5.0",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sass": "^1.87.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/next-auth": "^3.13.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "typescript": "^5"
+  }
+}
